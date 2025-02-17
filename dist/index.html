@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prashik - Portfolio</title>
+    <!-- Custom CSS  -->
+    <link rel="stylesheet" href="/dist/style.css" />
+
+    <!-- Icon Link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!-- Font Google Link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Locomotive Scroll CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+    />
+    <!-- Gsap link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Email JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "qTFEecCyB-y1q2pa5",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Nav bar  -->
+    <nav id="navbar-top" class="sticky top-0 bg-white left-0 right-0 z-50">
+      <div
+        class="container px-15 py-3 flex flex-wrap items-center justify-between"
+      >
+        <a class="font-bold text-4xl" href="#" style="color: #3f396d"
+          >Portfolio</a
+        >
+        <button class="nav-menu md:hidden" type="button" id="menu-toggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-fca61f"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+        <div
+          class="hidden md:flex justify-center w-full md:w-auto"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav flex flex-col md:flex-row gap-10 text-lg">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Skill">My Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Portfolio">Work</a>
+            </li>
+          </ul>
+        </div>
+        <button
+          id="contactButton"
+          class="c-btn ms-4 py-2 px-6 rounded-full hidden md:block bg-[#fca61f] text-white"
+        >
+          Contact
+        </button>
+      </div>
+    </nav>
+    <div data-scroll-container>
+      <!-- Home Section Start -->
+      <div>
+        <section
+          class="home pt-1 pb-0.5 bg-gradient-to-r from-[#f2f2ff] to-[#ebf9ff]"
+          id="home"
+        >
+          <div
+            class="container mx-auto px-5 flex flex-col md:flex-row justify-evenly items-center"
+          >
+            <div class="w-full md:w-1/2 text-center md:text-left">
+              <h2
+                class="text-[#3f396d] text-5xl md:text-6xl leading-tight"
+                id="home-text"
+              >
+                Hello! I Am <br /><span
+                  class="text-[#6f34fe] font-bold text-6xl md:text-7xl"
+                  >Prashik Gote</span
+                >
+              </h2>
+              <p
+                class="text-gray-600 mt-4 text-lg md:text-xl w-fit"
+                id="home-description"
+              >
+                I'm an aspiring Web Developer dedicated to crafting responsive
+                and user-friendly websites. Excited to explore new technologies
+                and improve with every line of code. Always learning and looking
+                to push the boundaries of web development. Enthusiastic and
+                quick-learning web development fresher, eager to apply
+                foundational skills and grow in a professional environment.
+              </p>
+
+              <button
+                class="bg-[#fca61f] text-white text-xl py-3 px-5 rounded-full mt-6"
+                id="home-button"
+              >
+                <a
+                  href="/img/Prashik_Resume1.pdf"
+                  download="Prashik-Resume"
+                  class="no-underline text-white"
+                  >Hire Me</a
+                >
+              </button>
+            </div>
+            <div class="w-full md:w-1/3 mt-8 md:mt-0">
+              <img
+                src="/img/p-removebg.png"
+                class="img-fluid"
+                id="home-image"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Expertise section  -->
+      <section class="expertise py-12 bg-gray-50" id="service">
+        <div class="container mb-5 mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">My Expertise</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-lg p-6 shadow-md hover:scale-105 transition duration-300"
+            >
+              <img
+                src="/img/service-icon1.png"
+                alt="Web Design"
+                class="mx-auto h-20"
+              />
+              <h3 class="text-xl font-semibold text-gray-800 mt-4">
+                Web Design
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Crafting beautiful and functional websites with a focus on user
+                experience.
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-lg p-6 shadow-md hover:scale-105 transition duration-300"
+            >
+              <img
+                src="/img/service-icon2.png"
+                alt="Web Development"
+                class="mx-auto h-20"
+              />
+              <h3 class="text-xl font-semibold text-gray-800 mt-4">
+                Web Development
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Building robust and scalable web applications using the latest
+                technologies.
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-lg p-6 shadow-md hover:scale-105 transition duration-300"
+            >
+              <img
+                src="/img/service-icon3.png"
+                alt="Debugging"
+                class="mx-auto h-20"
+              />
+              <h3 class="text-xl font-semibold text-gray-800 mt-4">
+                Debugging
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Identifying and resolving issues in code to ensure optimal
+                performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- skill section  -->
+
+      <section
+        class="skill py-5 bg-gradient-to-r from-[#f2f2ff] to-[#ebf9ff]"
+        id="about"
+      >
+        <div
+          class="container mt-7 mb-7 mx-auto flex flex-col md:flex-row justify-evenly"
+        >
+          <div class="w-full md:w-1/2 mt-12 md:mt-8 px-4">
+            <div class="grid grid-cols-3 gap-2 justify-items-center">
+              <div>
+                <div class="icon-card text-center">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/732/732212.png"
+                    alt="HTML Icon"
+                    class="w-14"
+                  />
+                  <p class="text mt-2">HTML</p>
+                </div>
+              </div>
+              <div>
+                <div class="icon-card text-center">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/732/732190.png"
+                    alt="CSS Icon"
+                    class="w-14"
+                  />
+                  <p class="text mt-2">CSS</p>
+                </div>
+              </div>
+              <div>
+                <div class="icon-card text-center">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+                    alt="JavaScript Icon"
+                    class="w-14"
+                  />
+                  <p class="text mt-2">JavaScript</p>
+                </div>
+              </div>
+
+              <div>
+                <div class="icon-card text-center mt-5">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
+                    alt="Bootstrap Icon"
+                    class="w-14"
+                  />
+                  <p class="text mt-2">Bootstrap</p>
+                </div>
+              </div>
+              <div>
+                <div class="icon-card text-center mt-7">
+                  <img
+                    src="/img/tailwind-css.svg"
+                    alt="Tailwind CSS Icon"
+                    class="w-14 ml-4"
+                  />
+                  <p class="text mt-5">Tailwind CSS</p>
+                </div>
+              </div>
+              <div>
+                <div class="icon-card text-center mt-5">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png"
+                    alt="SQL Icon"
+                    class="w-14"
+                  />
+                  <p class="text mt-2">SQL</p>
+                </div>
+              </div>
+
+              <div>
+                <div class="icon-card text-center mt-5">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png"
+                    alt="MySQL Icon"
+                    class="w-14"
+                  />
+                  <p class="text mt-2">MySQL</p>
+                </div>
+              </div>
+              <div>
+                <div class="icon-card text-center mt-5">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/3534/3534309.png"
+                    alt="MSSQL Icon"
+                    class="w-14"
+                  />
+                  <p class="text mt-2">MSSQL</p>
+                </div>
+              </div>
+              <div>
+                <div class="icon-card text-center mt-5 ml-4">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt="Git Icon"
+                    class="w-14"
+                  />
+                  <p class="text mt-2">Git&GitHub</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2 px-4">
+            <div class="heading mt-5 md:mt-3">
+              <small class="text-[#6f34fe] text-xl font-semibold"
+                >My Skills</small
+              >
+              <h3 class="text-[#3f396d] font-bold text-3xl md:text-4xl mt-2">
+                Beautiful & Digital Experiences
+              </h3>
+              <p class="para-size text-gray-600 mt-4">
+                I'm Prashik, a Frontend Developer on an exciting journey in web
+                innovation. My odyssey began at Shree Nithya Enterprises, where
+                I started as a Software Support Executive and quickly developed
+                skills in SQL, MSSQL, MySQL with strong understanding of
+                networking concepts, protocols, and technologies (e.g., TCP/IP,
+                DNS, DHCP, LAN/WAN).
+              </p>
+              <p class="para-size text-gray-600 mt-4">
+                With a growing passion for web development and exciting projects
+                on the horizon, the future of web development is exciting, and
+                I'm thrilled to be a part of it!
+              </p>
+              <button
+                class="bg-[#fca61f] text-white text-xl py-3 px-5 rounded-full mt-6 hover:translate-y-[-5px] transition-all duration-1000"
+              >
+                <a
+                  href="/img/Prashik_Resume1.pdf"
+                  download="Prashik-Resume"
+                  class="no-underline text-white"
+                  >Download CV</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section  -->
+      <section class="portfolio mt-5 mb-5" id="portfolio">
+        <div class="heading text-center pt-5">
+          <small class="text-gray-500">Creative Work</small>
+          <h3 class="text-3xl font-bold">Check My Portfolio</h3>
+        </div>
+
+        <div class="portfolio-body mt-8">
+          <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              <div class="hover:scale-105 transition duration-300">
+                <div class="card rounded-lg shadow-md">
+                  <img
+                    src="/img/Cynthia Ugwu-3.png"
+                    class="card-img-top rounded-t-lg"
+                    alt="..."
+                  />
+                  <div class="card-body text-center p-4">
+                    <h4 class="card-title text-xl font-semibold mb-2">
+                      <a href="https://cynthia-ugwu-by-prashik-gote.vercel.app/"
+                        >Cynthia Ugwu</a
+                      >
+                    </h4>
+                    <div class="flex flex-wrap justify-center">
+                      <span
+                        class="badge bg-gray-200 text-gray-700 rounded-full px-2 py-1 text-sm mr-1 mb-1"
+                        >HTML&CSS</span
+                      >
+                      <span
+                        class="badge bg-gray-200 text-gray-700 rounded-full px-2 py-1 text-sm mr-1 mb-1"
+                      >
+                        JavaScript</span
+                      >
+                    </div>
+                    <a
+                      href="https://cynthia-ugwu-by-prashik-gote.vercel.app/"
+                      target="_blank"
+                      class="link text-blue-500 hover:text-blue-700 mt-2 inline-block"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="hover:scale-105 transition duration-300">
+                <div class="rounded-lg shadow-md">
+                  <img
+                    src="/img/currency-converter-3.png"
+                    class="card-img-top rounded-t-lg"
+                    alt="..."
+                  />
+                  <div class="card-body text-center p-4">
+                    <h4 class="card-title text-xl font-semibold mb-2">
+                      Converter App
+                    </h4>
+                    <div class="flex flex-wrap justify-center">
+                      <span
+                        class="badge bg-gray-200 text-gray-700 rounded-full px-2 py-1 text-sm mr-1 mb-1"
+                        >HTML&CSS</span
+                      >
+                      <span
+                        class="badge bg-gray-200 text-gray-700 rounded-full px-2 py-1 text-sm mr-1 mb-1"
+                        >JavaScript</span
+                      >
+                    </div>
+                    <a
+                      href="https://github.com/Prashik-Gote"
+                      target="_blank"
+                      class="read-more-btn link text-blue-500 hover:text-blue-700 mt-2 inline-block"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="hover:scale-105 transition duration-300">
+                <div class="card rounded-lg shadow-md">
+                  <img
+                    src="/img/Weather .png"
+                    class="card-img-top rounded-t-lg"
+                    alt="Placeholder"
+                  />
+                  <div class="card-body text-center p-4">
+                    <h4 class="card-title text-xl font-semibold mb-2">
+                      Weather App
+                    </h4>
+                    <div class="flex flex-wrap justify-center">
+                      <span
+                        class="badge bg-gray-200 text-gray-700 rounded-full px-2 py-1 text-sm mr-1 mb-1"
+                        >HTML&CSS
+                      </span>
+                      <span
+                        class="badge bg-gray-200 text-gray-700 rounded-full px-2 py-1 text-sm mr-1 mb-1"
+                      >
+                        JavaScript</span
+                      >
+                    </div>
+                    <a
+                      href="https://github.com/Prashik-Gote"
+                      target="_blank"
+                      class="read-more-btn link text-blue-500 hover:text-blue-700 mt-2 inline-block"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact section  -->
+      <section class="contact py-12 bg-[#f3f3f3]" id="contactSection">
+        <div class="container mx-auto text-center">
+          <small class="text-[#6f34fe] text-xl font-semibold"
+            >Get in Touch</small
+          >
+          <h3 class="text-[#3f396d] font-bold text-3xl md:text-4xl mt-2">
+            Any Questions? Feel Free to Contact
+          </h3>
+        </div>
+
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-evenly mt-8"
+        >
+          <div class="w-full md:w-1/2 px-6">
+            <div class="contact-content text-center mb-8">
+              <h2 class="text-[#3f396d] text-2xl font-bold">
+                If you like what you see, let's connect.
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-12 gap-4">
+              <div class="col-span-1">
+                <i class="bi bi-telephone-fill text-gray-500 text-2xl"></i>
+              </div>
+              <div class="col-span-11">
+                <p class="text-xl">
+                  <a
+                    href="tel:+917972442059"
+                    class="text-blue-500 hover:underline font-medium"
+                  >
+                    +91 7972442059
+                  </a>
+                </p>
+              </div>
+
+              <div class="col-span-1">
+                <i class="bi bi-send-fill text-gray-500 text-2xl"></i>
+              </div>
+              <div class="col-span-11">
+                <p class="text-xl">
+                  <a
+                    href="mailto:prashikgote123@gmail.com"
+                    class="text-blue-500 hover:underline font-medium"
+                  >
+                    prashikgote123@gmail.com
+                  </a>
+                </p>
+              </div>
+
+              <div class="col-span-1">
+                <i class="bi bi-globe-americas text-gray-500 text-2xl"></i>
+              </div>
+              <div class="col-span-11">
+                <p class="text-xl">
+                  <a href="https://github.com/Prashik-Gote">
+                    https://github.com/Prashik-Gote</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2 px-6 mt-8 md:mt-0">
+            <div class="contact-form">
+              <input
+                type="text"
+                id="name"
+                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-[#fca61f] bg-white"
+                placeholder="Name"
+              />
+              <input
+                type="email"
+                id="email"
+                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-[#fca61f] mt-4 bg-white"
+                placeholder="E-mail"
+              />
+              <input
+                type="text"
+                id="contact"
+                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-[#fca61f] mt-4 bg-white"
+                placeholder="Mobile No."
+              />
+              <textarea
+                id="message"
+                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-[#fca61f] mt-4 bg-white"
+                placeholder="Message"
+                rows="5"
+              ></textarea>
+              <button
+                type="submit"
+                onclick="sendMail()"
+                class="bg-[#fca61f] text-white py-3 px-6 rounded-full mt-6 hover:bg-[#6f34fe] transition duration-300"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer section  -->
+      <footer class="bg-[#211e39] py-8 text-center">
+        <div class="container mx-auto">
+          <h3 class="text-white pt-4 text-2xl">Portfolio</h3>
+          <div class="mt-6 flex gap-2 justify-center space-x-6">
+            <a
+              href="#home"
+              class="text-gray-400 hover:text-[#fca61f] text-lg no-underline"
+              >Home</a
+            >
+            <span class="text-gray-500 mx-2">|</span>
+            <a
+              href="#about"
+              class="text-gray-400 hover:text-[#fca61f] text-lg no-underline"
+              >About</a
+            >
+            <span class="text-gray-500 mx-2">|</span>
+            <a
+              href="#service"
+              class="text-gray-400 hover:text-[#fca61f] text-lg no-underline"
+              >Skills</a
+            >
+            <span class="text-gray-500 mx-2">|</span>
+            <a
+              href="#portfolio"
+              class="text-gray-400 hover:text-[#fca61f] text-lg no-underline"
+              >Work</a
+            >
+            <span class="text-gray-500 mx-2">|</span>
+            <a
+              href="#contact"
+              class="text-gray-400 hover:text-[#fca61f] text-lg no-underline"
+              >Contact</a
+            >
+          </div>
+
+          <hr class="my-6 border-gray-600" />
+        </div>
+      </footer>
+    </div>
+
+    <!-- Locomotive Scroll JS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <!-- Gsap Link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Custom JS  -->
+    <script src="/src/js/script.js"></script>
+  </body>
+</html>

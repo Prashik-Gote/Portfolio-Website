@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* appling google font over the website  */
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.nav-menu {
+  border: none;
+  background-color: #fff;
+  font-size: 1.5rem;
+  color: #fca61f;
+  cursor: pointer;
+}
+
+.navbar-nav a {
+  color: black;
+  position: relative;
+}
+
+.navbar-nav a:hover {
+  color: #fca61f;
+}
+
+.navbar-nav a:after {
+  /* Underline effect on hover */
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  top: 25px;
+  position: absolute;
+  background: #fca61f;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.navbar-nav a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.c-btn {
+  border: none;
+  background: #fca61f;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* expertise section starts */
+.heading small {
+  color: #6f34fe;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.heading h3 {
+  margin-top: 0.5rem;
+  color: #3f396d;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #6f34fe;
+}
+.service-card {
+  text-align: center;
+  padding: 15px 15px;
+  border-radius: 0.7rem;
+}
+
+/* skill Section  */
+
+.para-size {
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
